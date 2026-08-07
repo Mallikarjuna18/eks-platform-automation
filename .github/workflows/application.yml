@@ -8,7 +8,7 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build Docker Image
       run: |
-        docker build -t mallikarjuna18/hello-world:${{ github.sha }} ./app
+        docker build -t mallikarjuna18/hello-world:latest ./app
     - name: Push Docker Image
       run: |
-        docker push mallikarjuna18/hello-world:${{ github.sha }}
+        docker push mallikarjuna18/hello-world:latest
