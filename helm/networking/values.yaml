@@ -1,0 +1,22 @@
+aws-load-balancer-controller:
+
+  clusterName: ""
+
+  region: ""
+
+  vpcId: ""
+
+  serviceAccount:
+    create: true
+    name: aws-load-balancer-controller
+
+cluster-autoscaler:
+
+  autoDiscovery:
+    clusterName: ""
+
+  awsRegion: ""
+
+  serviceAccount:
+    create: true
+    name: cluster-autoscaler

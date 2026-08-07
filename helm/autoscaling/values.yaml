@@ -1,0 +1,20 @@
+cluster-autoscaler:
+  cloudProvider: aws
+
+  awsRegion: ""
+
+  autoDiscovery:
+    clusterName: ""
+
+  rbac:
+    create: true
+
+  serviceAccount:
+    create: true
+    name: cluster-autoscaler
+
+  extraArgs:
+    balance-similar-node-groups: true
+    skip-nodes-with-system-pods: false
+    skip-nodes-with-local-storage: false
+    expander: least-waste

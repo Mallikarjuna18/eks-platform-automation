@@ -1,0 +1,10 @@
+kube-prometheus-stack:
+
+  grafana:
+    enabled: true
+
+  prometheus:
+    enabled: true
+
+  alertmanager:
+    enabled: true
