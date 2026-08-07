@@ -9,6 +9,9 @@ HELM_DIR="$ROOT_DIR/helm"
 echo "Building Networking dependencies..."
 helm dependency build "$HELM_DIR/networking"
 
+echo "Building Metricserver dependencies.."
+helm dependency build "$HELM_DIR/metrics-server"
+
 echo "Building Autoscaling dependencies..."
 helm dependency build "$HELM_DIR/autoscaling"
 

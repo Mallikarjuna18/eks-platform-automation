@@ -8,6 +8,7 @@ on:
       - "*.tf"
       - "*.tfvars"
       - "terraform/**"
+      - "helm/*"
   workflow_dispatch:
 jobs:
   terraform:
