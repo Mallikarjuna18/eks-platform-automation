@@ -17,3 +17,6 @@ helm dependency build "$HELM_DIR/monitoring"
 
 echo "Building Service Mesh dependencies..."
 helm dependency build "$HELM_DIR/service-mesh"
+
+echo "Building AgroCD dependencies..."
+helm dependency build "$HELM_DIR/agroCD"
