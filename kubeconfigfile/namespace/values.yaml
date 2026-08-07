@@ -1,2 +1,4 @@
 namespace:
   name: lucidity
+  labels:
+    istio-injection: enabled

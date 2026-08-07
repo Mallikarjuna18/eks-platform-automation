@@ -19,6 +19,8 @@ kind: VirtualService
 metadata:
   name: monitoring
   namespace: monitoring
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
 spec:
   hosts:
   - "*"

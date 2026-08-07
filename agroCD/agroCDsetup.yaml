@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hello-world
+  namespace: argocd
+spec:
+  project: default
+
+  sources:
+    - repoURL: https://github.com/Mallikarjuna18/githubactioncheck.git
+      targetRevision: main
+      path: kubeconfigfile/namespace
+
+    - repoURL: https://github.com/Mallikarjuna18/githubactioncheck.git
+      targetRevision: main
+      path: kubeconfigfile/helloWorld-helm
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: lucidity
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+
+    syncOptions:
+      - CreateNamespace=true
