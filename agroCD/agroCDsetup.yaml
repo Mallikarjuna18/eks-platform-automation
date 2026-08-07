@@ -7,11 +7,11 @@ spec:
   project: default
 
   sources:
-    - repoURL: https://github.com/Mallikarjuna18/githubactioncheck.git
+    - repoURL: https://github.com/Mallikarjuna18/eks-platform-automation.git
       targetRevision: main
       path: k8Deployfiles/namespace
 
-    - repoURL: https://github.com/Mallikarjuna18/githubactioncheck.git
+    - repoURL: https://github.com/Mallikarjuna18/eks-platform-automation.git
       targetRevision: main
       path: k8Deployfiles/helloWorld-helm
 
