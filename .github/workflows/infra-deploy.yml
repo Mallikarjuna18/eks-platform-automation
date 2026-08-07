@@ -1,13 +1,13 @@
 name: infra-deploy
 
 on:
-  #push:
- #   branches:
-  #    - main
-   # paths:
-    #  - "*.tf"
-     # - "*.tfvars"
-     # - "terraform/**"
+  push:
+    branches:
+      - main
+    paths:
+      - "*.tf"
+      - "*.tfvars"
+      - "terraform/**"
   workflow_dispatch:
 jobs:
   terraform:
