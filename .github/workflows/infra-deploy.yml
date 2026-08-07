@@ -24,3 +24,13 @@ jobs:
           terraform plan
       - name: Terraform Apply
         run: terraform apply -auto-approve
+      - name: Repo addition to Helm Dependencies
+        run: |
+          chmod +x helm/*.sh
+          ./helm/addRepos.sh
+      - name: Build Helm Dependencies
+        run: |
+          ./helm/dependencyBuild.sh
+      - name: Install Platform Components
+        run: |
+          ./helm/install.sh
