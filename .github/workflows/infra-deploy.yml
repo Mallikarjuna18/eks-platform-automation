@@ -21,6 +21,6 @@ jobs:
       - name: Terrafrom init and plan
         run: |
           terraform init
-          terrafrom plan
+          terraform plan
       - name: Terraform Apply
         run: terraform apply -auto-approve tfplan
