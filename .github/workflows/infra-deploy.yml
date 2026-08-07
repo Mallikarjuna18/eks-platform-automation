@@ -1,9 +1,9 @@
 name: infra-deploy
 
 on:
-#  push:
-#    branches:
-#      - main
+  push:
+    branches:
+      - main
     paths:
       - "*.tf"
       - "*.tfvars"
