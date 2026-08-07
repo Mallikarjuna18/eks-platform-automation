@@ -4,7 +4,7 @@ replicaCount: 3
 
 image:
   repository: malli183/helloworld
-  tag: "v1.0"
+  tag: "d9eebfc"
   pullPolicy: IfNotPresent
 
 service:
