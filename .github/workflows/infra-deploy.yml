@@ -1,0 +1,26 @@
+name: infra-deploy
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "*.tf"
+      - "*.tfvars"
+      - "terraform/**"
+  workflow_dispatch:
+jobs:
+  terraform:
+    runs-on: self-hosted
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Terrafrom init and plan
+        run: |
+          terraform init
+          terrafrom plan
+      - name: Terraform Apply
+        run: terraform apply -auto-approve tfplan
