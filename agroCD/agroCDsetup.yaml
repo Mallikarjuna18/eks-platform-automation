@@ -9,11 +9,11 @@ spec:
   sources:
     - repoURL: https://github.com/Mallikarjuna18/githubactioncheck.git
       targetRevision: main
-      path: kubeconfigfile/namespace
+      path: k8Deployfiles/namespace
 
     - repoURL: https://github.com/Mallikarjuna18/githubactioncheck.git
       targetRevision: main
-      path: kubeconfigfile/helloWorld-helm
+      path: k8Deployfiles/helloWorld-helm
 
   destination:
     server: https://kubernetes.default.svc
