@@ -407,6 +407,11 @@ Application traffic and monitoring traffic are isolated.
 
 ---
 
+## Limitations
+- HTTPS/TLS is not configured; the platform currently uses HTTP.
+- Domain names are not configured; AWS LoadBalancer DNS names are used.
+- Secrets are managed through Kubernetes Secrets and can be replaced with AWS Secrets Manager or External Secrets Operator.
+
 # Technologies Used
 
 * Amazon EKS
