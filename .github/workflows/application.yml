@@ -1,10 +1,6 @@
 name: Build Application
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - "app/**"
+  [workflow_dispatch]
 jobs:
   build:
     runs-on: self-hosted
