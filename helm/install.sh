@@ -40,4 +40,4 @@ helm upgrade --install istio-ingress charts/gateway-*.tgz -n istio-system --crea
 helm upgrade --install monitoring-ingress charts/gateway-*.tgz -n istio-system --wait -f monitoring-gateway-values.yaml
 
 cd $HELM_DIR/agroCD
-helm upgrade --install argo charts/agro-*.tgz -n argocd --create-namespace --wait
+helm upgrade --install argo . -n argocd --create-namespace --wait
