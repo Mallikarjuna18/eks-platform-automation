@@ -31,9 +31,7 @@ helm upgrade --install autoscaling . \
     --set cluster-autoscaler.awsRegion="$REGION"
 
 cd $HELM_DIR/monitoring
-helm upgrade --install monitoring . \
-    --namespace monitoring \
-    --create-namespace --wait
+helm upgrade --install monitoring . --namespace monitoring --create-namespace --wait
 
 cd $HELM_DIR/service-mesh
 helm upgrade --install istio-base charts/base-*.tgz  -n istio-system --create-namespace --wait -f base-values.yaml
@@ -42,4 +40,4 @@ helm upgrade --install istio-ingress charts/gateway-*.tgz -n istio-system --crea
 helm upgrade --install monitoring-ingress charts/gateway-*.tgz -n istio-system --wait -f monitoring-gateway-values.yaml
 
 cd $HELM_DIR/agroCD
-helm upgrade --install argo charts/agro-*.tgz -n argocd --create-namespace --wait -f values.yaml
+helm upgrade --install argo charts/agro-*.tgz -n argocd --create-namespace --wait
