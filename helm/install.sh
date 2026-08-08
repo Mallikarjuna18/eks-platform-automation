@@ -21,10 +21,7 @@ helm upgrade --install ingress . --namespace kube-system --create-namespace --wa
     --set aws-load-balancer-controller.vpcId="$VPC_ID"
 
 cd $HELM_DIR/metrics-server
-helm upgrade --install metrics-server \
-    ./helm/metrics-server \
-    -n kube-system \
-    --create-namespace --wait
+helm upgrade --install metrics-server . -n kube-system --create-namespace --wait
 
 cd $HELM_DIR/autoscaling
 helm upgrade --install autoscaling . \
